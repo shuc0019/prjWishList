@@ -25,7 +25,11 @@ public class HomeController {
     // redirect to main page
     @GetMapping("/index")
     public String login() {
-        return "index";
+        return "index";m
+    }
+    @GetMapping("/createAccount")
+    public String createAccount() {
+        return "createAccount";
     }
 
 
