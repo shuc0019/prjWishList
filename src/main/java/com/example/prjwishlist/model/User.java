@@ -1,25 +1,15 @@
 package com.example.prjwishlist.model;
 
 public class User {
-    private int user_id;
     private String username;
-    private int password;
+    private String userpassword;
 
     public User() {
     }
 
-    public User(int user_id, String username, int password) {
-        this.user_id = user_id;
+    public User(String username, String userpassword) {
         this.username = username;
-        this.password = password;
-    }
-
-    public int getUser_id() {
-        return user_id;
-    }
-
-    public void setUser_id(int user_id) {
-        this.user_id = user_id;
+        this.userpassword = userpassword;
     }
 
     public String getUsername() {
@@ -30,20 +20,12 @@ public class User {
         this.username = username;
     }
 
-    public int getPassword() {
-        return password;
+    public String getUserpassword() {
+        return userpassword;
     }
 
-    public void setPassword(int password) {
-        this.password = password;
+    public void setUserpassword(String userpassword) {
+        this.userpassword = userpassword;
     }
 
-    @Override
-    public String toString() {
-        return "User{" +
-                "user_id=" + user_id +
-                ", username='" + username + '\'' +
-                ", password=" + password +
-                '}';
-    }
 }
