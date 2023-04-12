@@ -32,5 +32,10 @@ public class HomeController {
         return "createAccount";
     }
 
+    @PostMapping("/accountCreated")
+    public String signupconfirm(){
+        return "signupconfirm";
+    }
+
 
 }
