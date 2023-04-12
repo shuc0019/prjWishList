@@ -22,7 +22,7 @@ input[type="text"], input[type="password"] {
 }
 
 input[type="submit"] {
-    background-color: #4CAF50;
+    background-color: green;
     color: white;
     padding: 10px 20px;
     border: none;
@@ -31,9 +31,26 @@ input[type="submit"] {
 }
 
 input[type="submit"]:hover {
-    background-color: #45a049;
+    background-color: green;
+}
+
+a {
+    text-decoration: none;
+}
+
+button{
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 3px;
+    border: 1px solid #ccc;
+    background-color: green;
+    color: white;
+    cursor: pointer;
+
 }
 .login{
 
    size: 1000px;
 }
+
