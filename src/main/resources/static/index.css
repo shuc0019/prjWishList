@@ -1,0 +1,88 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: lightskyblue;
+}
+
+header {
+    background-color: azure;
+    color: lightblue;
+    padding: 10px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+main {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+#add-item {
+    background-color: white;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+#add-item h2,
+#wishlist h2 {
+    margin-top: 0;
+}
+
+#add-item label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+#add-item input,
+#add-item textarea {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    box-sizing: border-box;
+}
+
+#add-item button[type="submit"] {
+    background-color: #333;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+#add-item button[type="submit"]:hover {
+    background-color: #555;
+}
+
+#wishlist ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#wishlist li {
+    background-color: whitesmoke;
+    padding: 20px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: row;
+}

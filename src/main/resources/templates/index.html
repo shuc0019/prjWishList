@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Wishlist</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+<header>
+    <h1>My Wishlist</h1>
+    <nav>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">My Account</a></li>
+            <li><a href="#">Logout</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+    <section id="add-item">
+        <h2>Add Item to Wishlist</h2>
+        <form>
+            <label for="item-name">Item Name:</label>
+            <input type="text" id="item-name">
+
+            <label for="item-description">Description:</label>
+            <textarea id="item-description"></textarea>
+
+            <button type="submit">Add Item</button>
+        </form>
+    </section>
+
+    <section id="wishlist">
+        <h2>My Wishlist</h2>
+        <ul>
+            <li>
+                <div class="item-image">
+                    <img src="https://via.placeholder.com/150x150.png" alt="Item Image">
+                </div>
+                <div class="item-details">
+                    <h3>Item Name</h3>
+                    <p>Item Description</p>
+                    <button class="edit-btn">Edit</button>
+                    <button class="delete-btn">Delete</button>
+                </div>
+            </li>
+            <!-- lav en ekstra her for at lave en ny liste -->
+        </ul>
+    </section>
+</main>
+
+<footer>
+    <p>&copy; 2023 KEA</p>
+</footer>
+
+
+
+</body>
+</html>
