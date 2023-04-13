@@ -4,6 +4,28 @@
     <meta charset="UTF-8">
     <title>My Wishlist</title>
     <link rel="stylesheet" href="index.css">
+
+    <style>
+        table{
+            border-collapse: collapse;
+            width: 40%;
+        }
+        th{
+            background-color: lightblue;
+        }
+        td,th{
+            border: 1px solid black;
+            text-align: left;
+            padding: 4px;
+
+        }
+        tr:nth-child(even){
+            background-color: lightgray;
+        }
+        tr:nth-child(odd){
+            background-color: lightgreen;
+        }
+    </style>
 </head>
 <body>
 <header>
@@ -55,6 +77,29 @@
 </footer>
 
 
+<table>
+    <thead>
+    <tr>
+        <th>ID</th>
+        <th>Username</th>
+        <th>Wishlist Title</th>
+        <th>Product Name</th>
+        <th>Product Price</th>
+        <th>Product Link</th>
+        <th>Actions</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="wishlist: ${wishlists}">
+        <td th:text="${wishlist.wishlists_id}"></td>
+        <td th:text="${wishlist.username}"></td>
+        <td th:text="${wishlist.wishlist_title}"></td>
+        <td th:text="${wishlist.product_name}"></td>
+        <td th:text="${wishlist.product_price}"></td>
+        <td th:text="${wishlist.product_link}"></td>
 
+    </tr>
+    </tbody>
+</table>
 </body>
 </html>
