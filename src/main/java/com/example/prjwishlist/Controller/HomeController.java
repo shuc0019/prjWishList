@@ -31,6 +31,8 @@ public class HomeController {
         return "index";
     }
 
+
+    // Validate login information
     @PostMapping("/loginAccount")
     public String loginAccount(String username, String userpassword, Model model) {
         User user = userRepository.findUserByUsernameAndPassword(username, userpassword);
