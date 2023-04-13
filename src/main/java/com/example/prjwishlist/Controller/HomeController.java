@@ -44,6 +44,8 @@ public class HomeController {
         return "createAccount";
 
     }
+
+    // create new account
     @PostMapping("/createNew")
     public String createNew(String confirm_password, Model model, @ModelAttribute User user, RedirectAttributes redirectAttributes) {
         if (userRepository.doesTheUserExist(user.getUsername())) {
