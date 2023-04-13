@@ -17,13 +17,22 @@ public class HomeController {
     UserRepository userRepository;
 
     @GetMapping("/")
-    public String index(){
+    public String home() {
+        //home page
+        return "home";
+    }
+    @GetMapping("/loginAccount")
+    public String login() {
 
-        return "login";
+            return "login";
+        }
+    @GetMapping("/index")
+    public String index(){
+        return "index";
     }
 
-    @PostMapping("/")
-    public String login(String username, String userpassword, Model model) {
+    @PostMapping("/loginAccount")
+    public String loginAccount(String username, String userpassword, Model model) {
         User user = userRepository.findUserByUsernameAndPassword(username, userpassword);
         if (user != null){
             return "loginconfirm";
@@ -33,18 +42,10 @@ public class HomeController {
         }
     }
 
-
-
     // redirect to main page
-    @GetMapping("/index")
-    public String login() {
-        return "index";
-    }
     @GetMapping("/createAccount")
     public String createAccount() {
-
         return "createAccount";
-
     }
 
     // create new account
@@ -59,11 +60,12 @@ public class HomeController {
                 return "createAccount";
             } else {
                 userRepository.addUser(user);
-                redirectAttributes.addFlashAttribute("succes", "Account created!!!!");
-                return "redirect:/";
+                model.addAttribute("succes", "Account created!!!!");
+                return "login";
             }
         }
     }
+
 
 
 }
