@@ -6,19 +6,21 @@
     <link rel="stylesheet" href="login.css">
 </head>
 <body>
-<div class="signup">
+<div class="signup" >
     <h1>Create Account</h1>
 
-    <form method="post" action="/accountCreated">
+    <form method="post" action="/createNew">
         <label for="username">Username:</label>
         <input type="text" id="username" name="username"><br><br>
         <label for="password">Password:</label>
-        <input type="password" id="password" name="password"><br><br>
+        <input type="password" id="password" name="userpassword"><br><br>
         <label for="confirm_password">Confirm Password:</label>
         <input type="password" id="confirm_password" name="confirm_password"><br><br>
         <input type="submit" value="Create Account">
-
     </form>
+    <p th:text="${forkert}"></p>
+
 </div>
+
 </body>
 </html>

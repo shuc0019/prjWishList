@@ -10,27 +10,28 @@
 <body>
 
 <div class="login">
-<h1>Login Page</h1>
+    <h1>Login Page</h1>
 
 
-<form method="post">
-    <label for="username">Username:</label>
-    <input type="text" id="username" name="username"><br><br>
-    <label for="password">Password:</label>
-    <input type="password" id="password" name="password"><br><br>
-    <input type="submit" value="Login">
-</form>
+    <form method="post">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username"><br><br>
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="userpassword"><br><br>
+        <input type="submit" value="Login">
+    </form>
 
-    <br>
-
-   <a href="createAccount">
-       <button>
-           Create an account
-       </button>
-   </a>
+    <a href="createAccount">
+        <button>
+            Create an account
+        </button>
+    </a>
 
 
-    <p th:text="${lol}">
+    <p th:text="${lol}"></p>
+    <p th:text="${succes}"></p>
+
 </div>
 </body>
 </html>
+
