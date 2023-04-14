@@ -2,38 +2,19 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>My Wishlist</title>
+    <title>WishCloud</title>
     <link rel="stylesheet" href="index.css">
 
-    <style>
-        table{
-            border-collapse: collapse;
-            width: 40%;
-        }
-        th{
-            background-color: lightblue;
-        }
-        td,th{
-            border: 1px solid black;
-            text-align: left;
-            padding: 4px;
-
-        }
-        tr:nth-child(even){
-            background-color: lightgray;
-        }
-        tr:nth-child(odd){
-            background-color: lightgreen;
-        }
-    </style>
 </head>
 <body>
 
-<h1>Du er nu logget ind som</h1>
-<h1 th:text="${username}"></h1>
-
 <header>
-    <h1>My Wishlist</h1>
+
+    <div class="logo">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQNocHxejDfkpOeBUk7LXNrZULLitzuQzn8yQ&usqp=CAU" alt="Item Image" >
+</div>
+
+    <h1>WishCloud</h1>
     <nav>
         <ul>
             <li><a href="#">Home</a></li>
@@ -41,6 +22,11 @@
             <li><a href="/">Logout</a></li>
         </ul>
     </nav>
+
+    <div class=""
+    <h1>Du er nu logget ind som</h1>
+    <h1 th:text="${username}"></h1>
+    <div
 </header>
 
 <main>
@@ -76,11 +62,6 @@
     </section>
 </main>
 
-<footer>
-    <p>&copy; 2023 KEA</p>
-</footer>
-
-
 <table>
     <thead>
     <tr>
@@ -101,5 +82,9 @@
     </tr>
     </tbody>
 </table>
+
+<footer>
+    <p>&copy; 2023 KEA</p>
+</footer>
 </body>
 </html>
