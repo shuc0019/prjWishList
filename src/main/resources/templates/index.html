@@ -28,6 +28,10 @@
     </style>
 </head>
 <body>
+
+<h1>Du er nu logget ind som</h1>
+<h1 th:text="${username}"></h1>
+
 <header>
     <h1>My Wishlist</h1>
     <nav>
@@ -81,8 +85,6 @@
     <thead>
     <tr>
         <th>ID</th>
-        <th>Username</th>
-        <th>Wishlist Title</th>
         <th>Product Name</th>
         <th>Product Price</th>
         <th>Product Link</th>
@@ -92,8 +94,6 @@
     <tbody>
     <tr th:each="wishlist: ${wishlists}">
         <td th:text="${wishlist.wishlists_id}"></td>
-        <td th:text="${wishlist.username}"></td>
-        <td th:text="${wishlist.wishlist_title}"></td>
         <td th:text="${wishlist.product_name}"></td>
         <td th:text="${wishlist.product_price}"></td>
         <td th:text="${wishlist.product_link}"></td>
