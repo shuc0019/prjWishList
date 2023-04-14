@@ -26,5 +26,9 @@ public class WishlistRepository {
                 " VALUES(?,?,?,?,?,?)";
         template.update(sql,p.getWishlists_id(),p.getUsername(), p.getWishlist_title(),p.getProduct_name(),p.getProduct_price(),p.getProduct_link());
     }
+    public Boolean deleteWish(int wishlists_id){
+        String sql = "DELETE FROM wishlists WHERE wishlists_id = ?";
+        return template.update(sql, wishlists_id) > 0;
+    }
 
 }
