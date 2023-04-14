@@ -81,6 +81,20 @@ public class HomeController {
         }
     }
 
+    @GetMapping("/create")
+    public String create(HttpSession session, RedirectAttributes redirectAttributes, Model model){
+        String username = (String) session.getAttribute("username");
+        model.addAttribute("username", username);
+        return "create";
+    }
+    @PostMapping("/createNewUser")
+    public String createNew(@ModelAttribute Wishlist wishlist, Model model,HttpSession session, RedirectAttributes redirectAttributes){
+        String username = (String) session.getAttribute("username");
+        model.addAttribute("username", username);
+        wishlistRepository.addPerson(wishlist);
+        return "redirect:/index";
+    }
+
 
 
 }

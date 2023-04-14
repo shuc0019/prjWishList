@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+
+
+<h1>Create a new person</h1>
+
+<form action="/createNewUser" method="post">
+  <input type="hidden" name="username" th:value="${username}">
+  <label>Wishlist Title:</label>
+  <input type="text" name="wishlist_title">
+  <br>
+  <label>Product Name:</label>
+  <input type="text" name="product_name">
+  <br>
+  <label>Product Price:</label>
+  <input type="number" name="product_price">
+  <br>
+  <label>Product Link:</label>
+  <input type="text" name="product_link">
+  <br>
+  <input type="submit" value="Add to Table" style="color:blue" >
+</form>
+
+</body>
+</html>

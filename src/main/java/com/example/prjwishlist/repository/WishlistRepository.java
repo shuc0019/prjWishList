@@ -20,4 +20,11 @@ public class WishlistRepository {
         return wishlists;
     }
 
+    public void addPerson(Wishlist p){
+
+        String sql = "INSERT INTO wishlists (wishlists_id,username, wishlist_title, product_name, product_price, product_link)" +
+                " VALUES(?,?,?,?,?,?)";
+        template.update(sql,p.getWishlists_id(),p.getUsername(), p.getWishlist_title(),p.getProduct_name(),p.getProduct_price(),p.getProduct_link());
+    }
+
 }
