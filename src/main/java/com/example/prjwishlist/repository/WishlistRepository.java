@@ -26,5 +26,32 @@ public class WishlistRepository {
                 " VALUES(?,?,?,?,?,?)";
         template.update(sql,p.getWishlists_id(),p.getUsername(), p.getWishlist_title(),p.getProduct_name(),p.getProduct_price(),p.getProduct_link());
     }
+    public Boolean deleteWish(int wishlists_id){
+        String sql = "DELETE FROM wishlists WHERE wishlists_id = ?";
+        return template.update(sql, wishlists_id) > 0;
+    }
+
+
+
+    public Wishlist findWishByID (int wishlist_id){
+        String sql = "SELECT * FROM wishlists WHERE wishlists_id = ?";
+        RowMapper<Wishlist >rowMapper=new BeanPropertyRowMapper<>(Wishlist.class);
+        Wishlist w = template.queryForObject(sql,rowMapper,wishlist_id);
+
+        return w;
+    }
+
+    public void updateWish(int wishlist_id, Wishlist w){
+        String sql = "UPDATE wishlists SET username = ?, " +
+                "wishlist_title = ?, product_name = ?, product_price = ?, product_link = ? WHERE wishlists_id = ?";
+
+        template.update(sql,w.getUsername(),w.getWishlist_title(),w.getProduct_name(),w.getProduct_price(),w.getProduct_link(),w.getWishlists_id());
+
+    }
+
+
+
+
+
 
 }

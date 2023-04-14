@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<form action="/updateWishList" method="post">
+  <input type="hidden" name="wishlists_id" th:value="${wish.wishlists_id}">
+  <input type="hidden" name="username" th:value="${username}">
+  <input type="hidden" name="wishlist_title" th:value="${wish.wishlist_title}">
+  <br>
+  <label>Product Name:</label>
+  <input type="text" name="product_name" th:value="${wish.product_name}" >
+  <br>
+  <label>Product Price:</label>
+  <input type="number" name="product_price" th:value="${wish.product_price}">
+  <br>
+  <label>Product Link:</label>
+  <input type="text" name="product_link" th:value="${wish.product_link}">
+  <br>
+  <input type="submit" value="Add to Table" style="color:blue" >
+</form>
+</body>
+
+</html>

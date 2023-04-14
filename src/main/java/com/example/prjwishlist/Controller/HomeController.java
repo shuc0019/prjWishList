@@ -8,10 +8,7 @@ import jakarta.servlet.http.HttpSession;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import java.util.List;
@@ -95,6 +92,20 @@ public class HomeController {
         return "redirect:/index";
     }
 
+    @GetMapping("/update/{wishlists_id}")
+    public String updateWish(@PathVariable("wishlists_id") int wishlists_id, Model model, HttpSession session) {
+        String username = (String) session.getAttribute("username");
+        model.addAttribute("username", username);
+        Wishlist wishlist = wishlistRepository.findWishByID(wishlists_id);
+        model.addAttribute("wish", wishlist);
+        return "update";
+    }
+
+    @PostMapping("/updateWishList")
+    public String processUpdateWish(@ModelAttribute Wishlist wishlist) {
+        wishlistRepository.updateWish(wishlist.getWishlists_id(), wishlist);
+        return "redirect:/index";
+    }
 
 
 }

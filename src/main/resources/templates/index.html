@@ -48,6 +48,8 @@
     Create a new wish
 </button>
 </a>
+
+
 <table>
     <thead>
     <tr>
@@ -64,8 +66,17 @@
         <td th:text="${wishlist.product_name}"></td>
         <td th:text="${wishlist.product_price}"></td>
         <td th:text="${wishlist.product_link}"></td>
+        <td>
 
-    </tr>
+  <a th:href="@{'/deleteOne/'+${wishlist.wishlists_id}}">
+                <button class="btn-deleteOne" id="btn-deleteOne">Delete wish</button>
+            </a>
+            <a th:href="@{'/update/'+${wishlist.wishlists_id}}">
+
+                <button class="btn-updateOne" id="btn-updateOne"> Change wish </button>
+
+            </a>
+
     </tbody>
 </table>
 
