@@ -41,7 +41,7 @@ public class HomeController {
             session.setAttribute("username", username);
             return "loginconfirm";
         } else {
-            model.addAttribute("lol", "Din login er forkert ");
+            model.addAttribute("invalidlogin", "Din login er forkert");
             return "login";
         }
     }
