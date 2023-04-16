@@ -52,7 +52,7 @@
 <table>
     <thead>
     <tr>
-        <th>ID</th>
+
         <th>Product Name</th>
         <th>Product Price</th>
         <th>Product Link</th>
@@ -65,7 +65,6 @@
 
     </a>
     <tr th:each="wishlist: ${wishlists}">
-        <td th:text="${wishlist.wishlists_id}"></td>
         <td th:text="${wishlist.product_name}"></td>
         <td th:text="${wishlist.product_price}"></td>
         <td><a th:href="${wishlist.product_link}" target="_blank" th:text="${wishlist.product_link}">Link</a></td>
