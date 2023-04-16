@@ -31,23 +31,22 @@
 <main>
     <section id="add-item">
         <h2>Add Item to Wishlist</h2>
-        <form>
-            <label for="item-name">Item Name:</label>
-            <input type="text" id="item-name">
+        <form action="/createNewUser" method="post">
 
-            <label for="item-description">Description:</label>
-            <textarea id="item-description"></textarea>
+            <input type="hidden" name="username" th:value="${username}">
+            <input type="hidden" name="wishlist_title">
+            <label>Product name:</label>
+            <input type="text" name="product_name">
 
+            <label>price:</label>
+            <input type="number" name="product_price">
+
+            <label>Product Link:</label>
+            <input type="text" name="product_link">
             <button type="submit">Add Item</button>
         </form>
     </section>
 </main>
-
-
-<a href="create"> <button>
-    Create a new wish
-</button>
-</a>
 
 
 <table>
