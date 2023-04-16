@@ -101,5 +101,15 @@ public class HomeController {
         return "redirect:/index";
     }
 
+    @GetMapping("/deleteOne/{wishlists_id}")
+    public String deleteOne(@PathVariable("wishlists_id") int wishlists_id){
+        boolean deleted = wishlistRepository.deleteWish(wishlists_id);
+        if (deleted){
+            return "redirect:/index";
+        }else {
+            return "redirect:/index";
+        }
+    }
+
 
 }
