@@ -86,6 +86,8 @@ public class HomeController {
         return "redirect:/index";
     }
 
+
+
     @GetMapping("/update/{wishlists_id}")
     public String updateWish(@PathVariable("wishlists_id") int wishlists_id, Model model, HttpSession session) {
         String username = (String) session.getAttribute("username");
@@ -109,6 +111,16 @@ public class HomeController {
         }else {
             return "redirect:/index";
         }
+    }
+
+    @GetMapping("/shareWishlist")
+    public String shareWishTable(Model model, HttpSession session){
+        String username = (String) session.getAttribute("username");
+        model.addAttribute("username", username);
+        List <Wishlist> wishlists = wishlistRepository.fetchAll(username);
+        model.addAttribute("wishlists",wishlists);
+        return "/shareWishlist";
+
     }
 
 
