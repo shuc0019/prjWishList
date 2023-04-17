@@ -64,10 +64,6 @@ public class HomeController {
         return "createAccount";
     }
 
-
-
-
-
     // create new account
     // Denne kodeblok håndterer en POST-anmodning.
     @PostMapping("/createNew")
@@ -88,11 +84,11 @@ public class HomeController {
     }
     //Denne kodeblok håndterer en POST-anmodning, der indeholder en ønskeliste.
     //Der omdirigeres derefter til siden "index" i en Spring webapplikation.
-    @PostMapping("/createNewUser")
+    @PostMapping("/creatItem")
     public String createNew(@ModelAttribute Wishlist wishlist, Model model,HttpSession session, RedirectAttributes redirectAttributes){
         String username = (String) session.getAttribute("username");
         model.addAttribute("username", username);
-        wishlistRepository.addPerson(wishlist);
+        wishlistRepository.addItem(wishlist);
         return "redirect:/index";
     }
 

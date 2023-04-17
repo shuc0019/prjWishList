@@ -20,7 +20,7 @@ public class WishlistRepository {
         return wishlists;
     }
 
-    public void addPerson(Wishlist p){
+    public void addItem(Wishlist p){
 
         String sql = "INSERT INTO wishlists (wishlists_id,username, wishlist_title, product_name, product_price, product_link)" +
                 " VALUES(?,?,?,?,?,?)";
