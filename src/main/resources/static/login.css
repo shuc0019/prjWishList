@@ -3,10 +3,11 @@ body{
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background: lightskyblue;
+    background: rgb(70,178,236);
+    background: linear-gradient(0deg, rgba(70,178,236,1) 0%, rgba(255,255,255,1) 100%);
+    font-family: Arial, sans-serif;
 
 }
-
 form{
     display: flex;
     flex-direction: column;
@@ -51,7 +52,20 @@ button{
 
 }
 .login{
-
    size: 1000px;
 }
 
+.login h1 {
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 30px;
+    border: 2px solid white;
+    color: white;
+    background-color: lightskyblue;
+    cursor: pointer;
+}
+
+.login h1:hover {
+    background-color: lightskyblue;
+    color: white;
+}

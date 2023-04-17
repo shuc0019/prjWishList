@@ -2,7 +2,8 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background: lightskyblue;
+    background: rgb(70,178,236);
+    background: linear-gradient(0deg, rgba(70,178,236,1) 0%, rgba(255,255,255,1) 100%);
 }
 
 header {
