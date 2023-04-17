@@ -68,7 +68,7 @@ main {
 }
 
 #add-item button[type="submit"] {
-    background-color: #333;
+    background-color: green;
     color: white;
     padding: 10px 20px;
     border: none;
@@ -125,6 +125,37 @@ th {
     justify-content: space-between;
 }
 
+.btn-deleteOne {
+    background-color: red;
+    color: white;
+    border: 1px solid black;
+    border-radius: 2px;
+    padding: 7px 10px;
+    margin-right: 10px;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 0.7em;
+}
+
+.btn-updateOne {
+    background-color: orange;
+    color: white;
+    border: 1px solid black;
+    border-radius: 2px;
+    padding: 7px 10px;
+    margin-right: 10px;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 0.7em;
+}
+
+.btn-deleteOne:active {
+    background-color: #bd2130;
+}
+
+.btn-updateOne:active {
+    background-color: #1e90ff;
+}
 .share-button {
     background-color: #333;
     color: white;
