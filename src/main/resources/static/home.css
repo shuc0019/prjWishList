@@ -19,10 +19,28 @@ header {
     max-height: 50px;
 }
 
+.head a.button {
+    background-color: transparent;
+    color: lightskyblue;
+    border: 2px solid lightskyblue;
+    border-radius: 5px;
+    font-size: 16px;
+    text-decoration: none;
+    padding: 10px 20px;
+    margin-left: 10px;
+}
+
+.head a.button:hover {
+    background-color: lightskyblue;
+    color: white;
+}
+
+
 h1 {
     font-size: 48px;
     margin: 0;
 }
+
 
 .container {
     display: flex;

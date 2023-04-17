@@ -2,17 +2,13 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Login to WishCloud</title>
     <link rel="stylesheet" href="login.css">
-
-
 </head>
 <body>
 
 <div class="login">
     <h1>Login Page</h1>
-
-
     <form method="post" action="/loginAccount">
         <label for="username">Username:</label>
         <input type="text" id="username" name="username"><br><br>
@@ -20,18 +16,15 @@
         <input type="password" id="password" name="userpassword"><br><br>
         <input type="submit" value="Login">
     </form>
-
     <a href="createAccount">
         <button>
             Create an account
         </button>
     </a>
-
-
     <p th:text="${invalidlogin}"></p>
     <p th:text="${succes}"></p>
-
 </div>
 </body>
 </html>
+
 
