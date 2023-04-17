@@ -10,23 +10,25 @@
 </head>
 <body>
 
-<header>
 
-    <div class="logo">
-    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQNocHxejDfkpOeBUk7LXNrZULLitzuQzn8yQ&usqp=CAU" alt="Item Image" >
-</div>
+    <header>
+        <div class="logo">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQNocHxejDfkpOeBUk7LXNrZULLitzuQzn8yQ&usqp=CAU" alt="Item Image">
+        </div>
+        <h1 class="logoNameIndex">WishCloud</h1>
+        <div class="header-right">
+            <p class="userlog">Logged in as:</p>
+            <h1 th:text="${username}"></h1>
+            <nav>
+                <ul>
+                    <li>
+                        <button type="button" onclick="location.href='/'">Logout</button>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
-    <h1 class="logoNameIndex">WishCloud</h1>
-    <nav>
-        <ul>
-            <li><a href="/">Logout</a></li>
-        </ul>
-    </nav>
-
-    <p1 class="userlog">Logged in as:</p1>
-    <h1 th:text="${username}"></h1>
-
-</header>
 
 <main>
     <section id="add-item">

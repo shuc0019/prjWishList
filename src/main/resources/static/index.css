@@ -6,19 +6,24 @@ body {
 }
 
 header {
+    background-color: white;
+    color: #ffffff;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #fff;
-    padding: 30px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 40px;
 }
 
 .logo img {
-    width: 60px;
-    height: 60px;
-    object-fit: contain;
+    max-height: 50px;
 }
+
+
+.header-right {
+    display: flex;
+    align-items: center;
+}
+
 
 .logoNameIndex {
     margin-left: 10px;
@@ -39,19 +44,32 @@ nav ul li {
     margin-right: 20px;
 }
 
-nav ul li a {
-    color: #333;
-    text-decoration: none;
+nav ul li button {
+    background-color: transparent;
+    color: lightskyblue;
+    border: 2px solid lightskyblue;
+    padding: 10px 20px;
+    border-radius: 5px;
     font-weight: bold;
+    cursor: pointer;
 }
 
-.userlog {
-    margin-right: 10px;
+nav ul li button:hover {
+    background-color: lightskyblue;
+    color: white;
 }
 
+
+.userlog, h1 {
+    font-size: 17px;
+    font-family: Arial, sans-serif;
+    color: black;
+}
 h1 {
     margin: 0;
-    font-size: 24px;
+    font-size: 17px;
+    font-family: Arial, sans-serif;
+
 }
 
 main {
@@ -186,17 +204,4 @@ th {
     display: block;
     margin: 0 auto;
 }
-
-.logoNameIndex{
-    color: lightskyblue;
-    margin-right: 500px;
-}
-
-.userlog{
-    color: lightskyblue;
-    margin-right: 15px;
-}
-
-
-
 
