@@ -26,8 +26,11 @@ header {
 }
 
 
-.logoNameIndex {
+.logoname {
+    display: inline-block;
     margin-left: 10px;
+    color: lightskyblue;
+    font-size: 48px;
 }
 
 nav {
@@ -66,6 +69,7 @@ nav ul li button:hover {
     font-family: Arial, sans-serif;
     color: black;
 }
+
 h1 {
     margin: 0;
     font-size: 17px;
