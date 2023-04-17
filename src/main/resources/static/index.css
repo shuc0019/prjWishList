@@ -30,7 +30,7 @@ nav ul li {
 }
 
 nav ul li a {
-    color: white;
+    color: black;
     text-decoration: none;
 }
 
@@ -124,4 +124,18 @@ th {
     flex-direction: row;
     justify-content: space-between;
 }
+
+.share-button {
+    background-color: #333;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    display: block;
+    margin: 0 auto;
+}
+
+
+
 

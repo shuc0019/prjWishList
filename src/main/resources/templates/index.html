@@ -5,6 +5,8 @@
     <title>WishCloud</title>
     <link rel="stylesheet" href="index.css">
 
+
+
 </head>
 <body>
 
@@ -17,8 +19,6 @@
     <h1>WishCloud</h1>
     <nav>
         <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">My Account</a></li>
             <li><a href="/">Logout</a></li>
         </ul>
     </nav>
@@ -36,10 +36,10 @@
             <input type="hidden" name="username" th:value="${username}">
             <input type="hidden" name="wishlist_title">
             <label>Product name:</label>
-            <input type="text" name="product_name">
+            <input type="text" name="product_name" required>
 
             <label>price:</label>
-            <input type="number" name="product_price">
+            <input type="number" name="product_price" required>
 
             <label>Product Link:</label>
             <input type="text" name="product_link">
@@ -60,10 +60,16 @@
     </tr>
     </thead>
     <tbody>
+    </a>
+    <a th:href="@{/shareWishlist}"><button class="share-button">Share Wishlist</button>
+
+
+    </a>
     <tr th:each="wishlist: ${wishlists}">
         <td th:text="${wishlist.product_name}"></td>
         <td th:text="${wishlist.product_price}"></td>
-        <td th:text="${wishlist.product_link}"></td>
+        <td><a th:href="${wishlist.product_link}" target="_blank" th:text="${wishlist.product_link}">Link</a></td>
+
         <td>
 
   <a th:href="@{'/deleteOne/'+${wishlist.wishlists_id}}">
@@ -72,8 +78,6 @@
             <a th:href="@{'/update/'+${wishlist.wishlists_id}}">
 
                 <button class="btn-updateOne" id="btn-updateOne"> Change wish </button>
-
-            </a>
 
     </tbody>
 </table>
