@@ -92,3 +92,8 @@ button:hover {
 .wishlist-section button:hover {
     background-color: #555;
 }
+
+.logoname{
+    color: lightskyblue;
+    margin-right: 400px;
+}

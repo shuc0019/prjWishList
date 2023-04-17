@@ -16,14 +16,14 @@
     <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQNocHxejDfkpOeBUk7LXNrZULLitzuQzn8yQ&usqp=CAU" alt="Item Image" >
 </div>
 
-    <h1>WishCloud</h1>
+    <h1 class="logoNameIndex">WishCloud</h1>
     <nav>
         <ul>
             <li><a href="/">Logout</a></li>
         </ul>
     </nav>
 
-    <h1>Logged in as:</h1>
+    <p1 class="userlog">Logged in as:</p1>
     <h1 th:text="${username}"></h1>
 
 </header>
@@ -78,6 +78,7 @@
             <a th:href="@{'/update/'+${wishlist.wishlists_id}}">
 
                 <button class="btn-updateOne" id="btn-updateOne"> Change wish </button>
+            </a>
 
     </tbody>
 </table>
