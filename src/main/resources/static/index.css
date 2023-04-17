@@ -6,22 +6,32 @@ body {
 }
 
 header {
-    background-color: white;
-    color: black;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 40px;
+    background-color: #fff;
+    padding: 30px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .logo img {
-    max-height: 50px;
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+}
+
+.logoNameIndex {
+    margin-left: 10px;
+}
+
+nav {
+    margin-left: auto;
 }
 
 nav ul {
     list-style: none;
-    padding: 0;
     margin: 0;
+    padding: 0;
     display: flex;
 }
 
@@ -30,8 +40,18 @@ nav ul li {
 }
 
 nav ul li a {
-    color: black;
+    color: #333;
     text-decoration: none;
+    font-weight: bold;
+}
+
+.userlog {
+    margin-right: 10px;
+}
+
+h1 {
+    margin: 0;
+    font-size: 24px;
 }
 
 main {
