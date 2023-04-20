@@ -45,8 +45,8 @@ public class WishlistRepository {
         String sql = "UPDATE wishlists SET username = ?, " +
                 "wishlist_title = ?, product_name = ?, product_price = ?, product_link = ? WHERE wishlists_id = ?";
 
-        template.update(sql,w.getUsername(),w.getWishlist_title(),w.getProduct_name(),w.getProduct_price(),w.getProduct_link(),w.getWishlists_id());
-
+        template.update(sql,w.getUsername(),w.getWishlist_title(),w.getProduct_name(),w.getProduct_price(),
+                w.getProduct_link(),w.getWishlists_id());
     }
 
 
