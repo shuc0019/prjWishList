@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import java.util.List;
-
+//min branch
 @Controller
 public class HomeController {
 
@@ -67,7 +67,7 @@ public class HomeController {
     // create new account
     // Denne kodeblok håndterer en POST-anmodning.
     @PostMapping("/createNew")
-    public String createNew(String confirm_password, Model model, @ModelAttribute User user, RedirectAttributes redirectAttributes) {
+    public String createNew(String confirm_password, Model model, @ModelAttribute User user) {
         if (userRepository.doesTheUserExist(user.getUsername())) {
             model.addAttribute("forkert", "Brugernavn allerede i brug");
             return "createAccount";
