@@ -120,15 +120,7 @@ public class HomeController {
         }
     }
 
-    @GetMapping("/shareWishlist")
-    public String shareWishTable(Model model, HttpSession session){
-        String username = (String) session.getAttribute("username");
-        model.addAttribute("username", username);
-        List <Wishlist> wishlists = wishlistRepository.fetchAll(username);
-        model.addAttribute("wishlists",wishlists);
-        return "/shareWishlist";
 
-    }
 
 
 }
