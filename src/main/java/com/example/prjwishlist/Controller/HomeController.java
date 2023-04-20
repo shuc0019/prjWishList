@@ -50,7 +50,9 @@ public class HomeController {
         String username = (String) session.getAttribute("username");
         model.addAttribute("username", username);
         List<Wishlist> wishlists = wishlistRepository.fetchAll(username);
+        String shareUrl = "localhost:1111/shareWishlist/" + username;
         model.addAttribute("wishlists", wishlists);
+        model.addAttribute("shareUrl", shareUrl);
         return "index";
     }
 
@@ -113,15 +115,17 @@ public class HomeController {
         }
     }
 
-    @GetMapping("/shareWishlist")
-    public String shareWishTable(Model model, HttpSession session){
-        String username = (String) session.getAttribute("username");
-        model.addAttribute("username", username);
-        List <Wishlist> wishlists = wishlistRepository.fetchAll(username);
-        model.addAttribute("wishlists",wishlists);
-        return "/shareWishlist";
 
+    @GetMapping("/shareWishlist/{username}")
+    public String shareWishlist(@PathVariable String username, Model model) {
+        String shareUrl = "localhost:1111/shareWishlist/" + username;
+        List<Wishlist> wishlists = wishlistRepository.fetchAll(username);
+        model.addAttribute("wishlists", wishlists);
+        model.addAttribute("shareUrl", shareUrl);
+        return "shareWishlist";
     }
+
+
 
 
 }

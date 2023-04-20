@@ -82,6 +82,9 @@
 
     </tbody>
 </table>
+<a th:href="@{/shareWishlist/{username}(username=${username})}">Generate Share Link</a>
+<p>Share this link with others:</p>
+<p th:text="${shareUrl}"></p>
 
 
 </body>
